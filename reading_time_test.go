@@ -118,6 +118,16 @@ func TestEstimate(t *testing.T) {
 			},
 		},
 		{
+			testName: "should handle HTML file",
+			text:     "This is a link: <a href=\"http://random.org\" class=\"link-style\">random</a>",
+			opts:     nil,
+			expectedRes: &readingtime.Result{
+				Text:     "1 min read",
+				Duration: time.Minute,
+				Words:    5,
+			},
+		},
+		{
 			testName: "should handle text containing links",
 			text:     "word https://github.com/begmaroman word",
 			opts:     nil,

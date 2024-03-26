@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math"
 	"time"
+
+	"github.com/microcosm-cc/bluemonday"
 )
 
 const (
@@ -69,6 +71,9 @@ func Estimate(text string, opts ...Option) *Result {
 	for _, opt := range opts {
 		opt(&op)
 	}
+
+	p := bluemonday.StrictPolicy()
+	text = p.Sanitize(text)
 
 	words := 0
 	start := 0
