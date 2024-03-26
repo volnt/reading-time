@@ -8,7 +8,7 @@ Note that it's focused on performance and simplicity, so the number of words it 
 ## Installation
 
 ```bash
-go get github.com/begmaroman/reading-time
+go get github.com/volnt/reading-time
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ package main
 import (
     "fmt"
  
-    readingtime "github.com/begmaroman/reading-time"
+    readingtime "github.com/volnt/reading-time"
 )
 
 func main()  {

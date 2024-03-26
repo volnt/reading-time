@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	readingtime "github.com/begmaroman/reading-time"
+	readingtime "github.com/volnt/reading-time"
 )
 
 const (
@@ -129,7 +129,7 @@ func TestEstimate(t *testing.T) {
 		},
 		{
 			testName: "should handle text containing links",
-			text:     "word https://github.com/begmaroman word",
+			text:     "word https://github.com/volnt word",
 			opts:     nil,
 			expectedRes: &readingtime.Result{
 				Text:     "1 min read",
@@ -139,7 +139,7 @@ func TestEstimate(t *testing.T) {
 		},
 		{
 			testName: "should handle text containing markdown links",
-			text:     "word [github](https://github.com/begmaroman) word",
+			text:     "word [github](https://github.com/volnt) word",
 			opts:     nil,
 			expectedRes: &readingtime.Result{
 				Text:     "1 min read",

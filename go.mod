@@ -1,4 +1,4 @@
-module github.com/begmaroman/reading-time
+module github.com/volnt/reading-time
 
 go 1.21
 
